@@ -48,12 +48,9 @@ function imprimeTitulo(pregunta) {
 }
 
 function imprimeTodasLasRespuestas(pregunta) {
-  
-
   let resultado = "";
-  let longitudObjeto = Object.keys(pregunta.respuestas).length;
+  let longitudObjeto = (pregunta.respuestas).length;
   
-
   for (let i = 0; i < longitudObjeto; i++) {
     let result= pregunta.respuestas[i];
     resultado += imprimeUnaRespuesta(result)
@@ -68,14 +65,14 @@ function imprimeUnaRespuesta(respuesta) {
 }
 
 function imprimeLabel(respuesta) {
-  return `<label for= ${respuesta.id} > ${respuesta.label} </label>`;
+  return `<label for= ${respuesta.id} > ${respuesta.label} </label>\n`;
   
 
 }
 
 function imprimeInput(respuesta) {
 
-  return `<input type="radio" id="${respuesta.id}" name="${respuesta.name}" value="${respuesta.value}"></input>`
+  return `<input type="radio" id="${respuesta.id}" name="${respuesta.name}" value="${respuesta.value}">`
 }
 
 
